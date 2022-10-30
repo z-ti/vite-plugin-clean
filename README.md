@@ -1,6 +1,6 @@
 # vite-plugin-clean
 
-[![npm](https://d25lcipzij17d.cloudfront.net/badge.svg?id=js&r=r&type=6e&v=0.0.2&x2=0)](https://github.com/z-ti/vite-plugin-clean)
+[![npm](https://d25lcipzij17d.cloudfront.net/badge.svg?id=js&r=r&type=6e&v=0.1.0&x2=0)](https://github.com/z-ti/vite-plugin-clean)
 
 A vite plugin to remove/clean your build folder(s).
 
