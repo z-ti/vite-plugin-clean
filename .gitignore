@@ -1,0 +1,12 @@
+node_modules
+.vscode
+.DS_Store
+*.log
+*.tmp
+.cache
+.temp
+dist
+.local
+# local env files
+.env.local
+.env.*.local
