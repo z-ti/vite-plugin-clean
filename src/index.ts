@@ -1,26 +1,26 @@
 // @ts-nocheck
 import fs from 'fs'
-import { resolve } from 'path'
+import path from 'path'
 import type { PluginOption } from 'vite'
 import type { ConfigOptions } from './typing'
 
 let options = {}
 const { resolve, join } = path
-const { existsSync, readdirSync, statSync, unlinkSync } = fs
+const { existsSync, readdirSync, statSync, unlinkSync, rmdirSync } = fs
 
 function cleanFiles(dirPath) {
   if(existsSync(dirPath)) {
     let files = readdirSync(dirPath)
     files.forEach(file => {
       let path = join(dirPath, file)
-      if(statSync(path).isDirectory) {
+      if(statSync(path).isDirectory()) {
         cleanFiles(path)
+        rmdirSync(path)
       }else {
         unlinkSync(path)
       }
     })
   }
-
 }
 
 const cleanPlugin = (_opt?: ConfigOptions): PluginOption => {
