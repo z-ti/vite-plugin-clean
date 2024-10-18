@@ -9,17 +9,21 @@ const { resolve, join } = path
 const { existsSync, readdirSync, statSync, unlinkSync, rmdirSync } = fs
 
 function cleanFiles(dirPath) {
-  if(existsSync(dirPath)) {
-    let files = readdirSync(dirPath)
-    files.forEach(file => {
-      let path = join(dirPath, file)
-      if(statSync(path).isDirectory()) {
-        cleanFiles(path)
-        rmdirSync(path)
-      }else {
-        unlinkSync(path)
+  if (existsSync(dirPath)) {
+      if (statSync(dirPath).isDirectory()) {
+          let files = readdirSync(dirPath);
+          files.forEach((file) => {
+              let path2 = join(dirPath, file);
+              if (statSync(path2).isDirectory()) {
+                  cleanFiles(path2);
+                  rmdirSync(path2);
+              } else {
+                  unlinkSync(path2);
+              }
+          });
+      } else {
+          unlinkSync(dirPath);
       }
-    })
   }
 }
 
