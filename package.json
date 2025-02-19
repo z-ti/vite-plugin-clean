@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-clean",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A vite plugin to remove/clean your build file(s) or folder(s).",
   "keywords": [
     "vite-plugin",
