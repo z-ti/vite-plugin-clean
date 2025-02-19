@@ -1,4 +1,4 @@
 
-export interface ConfigOptions{
-  targetFiles?: string[]
+export interface ConfigOptions {
+  targetFiles?: string | string[]
 }

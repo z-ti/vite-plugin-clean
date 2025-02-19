@@ -2,7 +2,7 @@
 
 [![npm](https://d25lcipzij17d.cloudfront.net/badge.svg?id=js&r=r&type=6e&v=1.0.0&x2=0)](https://github.com/z-ti/vite-plugin-clean)
 
-A vite plugin to remove/clean your build folder(s).
+A vite plugin to remove/clean your build file(s) or folder(s).
 
 ## Table of Contents
 
@@ -43,10 +43,9 @@ Allowed values are as follows:
 
 |Name|Type|Default|Description|
 |:--:|:--:|:-----:|:----------|
-|**`targetFiles`**|`{Array.<string>}`|`['dist']`|List of directories removed before packing the file|
+|**`targetFiles`**|`{Array.<string>}/string`|`['dist']`|List of files or directories removed before packing the file|
 
 Here's an example vite config illustrating how to use these options
-
 **vite.config.js**
 ```js
 import cleanPlugin from 'vite-plugin-clean';
@@ -54,6 +53,19 @@ export default {
   plugins: [cleanPlugin(
     {
       targetFiles: ['dist', 'test']
+    }
+  )],
+}
+```
+
+or
+**vite.config.js**
+```js
+import cleanPlugin from 'vite-plugin-clean';
+export default {
+  plugins: [cleanPlugin(
+    {
+      targetFiles: ['test', 'test.js', 'demo.html']
     }
   )],
 }

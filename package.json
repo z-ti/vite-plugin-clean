@@ -1,17 +1,24 @@
 {
   "name": "vite-plugin-clean",
-  "version": "1.0.0",
-  "description": "A vite plugin to remove/clean your build folder(s).",
+  "version": "2.0.0",
+  "description": "A vite plugin to remove/clean your build file(s) or folder(s).",
   "keywords": [
     "vite-plugin",
     "vite",
     "clean",
     "remove",
+    "folder",
     "directory",
+    "directories",
     "files",
+    "file",
+    "build",
+    "build dist",
+    "residual-files",
     "project-clean",
     "directory-removed",
-    "vite-plugin-clean"
+    "vite-plugin-clean",
+    "vite-plugin-remove"
   ],
   "license": "MIT",
   "author": "flyfox (https://github.com/flyfox11)",
@@ -30,12 +37,12 @@
     "stub": "unbuild --stub"
   },
   "dependencies": {
-    "@rollup/pluginutils": "^4.2.1",
-    "vite": "^2.9.8"
+    "@rollup/pluginutils": "^5.1.4",
+    "vite": "^6.1.0"
   },
   "devDependencies": {
-    "@types/node": "^17.0.31",
-    "typescript": "^4.6.4",
-    "unbuild": "^0.7.4"
+    "@types/node": "^22.13.4",
+    "typescript": "^5.7.3",
+    "unbuild": "^3.3.1"
   }
 }
